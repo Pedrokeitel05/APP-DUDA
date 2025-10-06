@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 35 30% 96%;
+    --foreground: 160 15% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 160 15% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 15% 25%;
+
+    --primary: 165 55% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 140 25% 85%;
+    --secondary-foreground: 160 15% 25%;
+
+    --muted: 35 20% 92%;
+    --muted-foreground: 160 10% 45%;
+
+    --accent: 140 40% 75%;
+    --accent-foreground: 160 20% 20%;
+
+    --destructive: 355 70% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 42 85% 70%;
+    --warning-foreground: 30 30% 20%;
+
+    --success: 165 55% 48%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 35 15% 88%;
+    --input: 35 15% 88%;
+    --ring: 165 55% 48%;
+
+    --radius: 1rem;
+
+    --gradient-soft: linear-gradient(135deg, hsl(165 55% 48% / 0.1) 0%, hsl(140 40% 75% / 0.1) 100%);
+    --shadow-soft: 0 4px 20px -2px hsl(165 55% 48% / 0.1);
+    --shadow-card: 0 2px 12px -2px hsl(160 10% 45% / 0.08);
+  }
+
+  .dark {
+    --background: 160 20% 10%;
+    --foreground: 35 30% 96%;
+
+    --card: 160 15% 15%;
+    --card-foreground: 35 30% 96%;
+
+    --popover: 160 15% 15%;
+    --popover-foreground: 35 30% 96%;
+
+    --primary: 165 55% 55%;
+    --primary-foreground: 160 20% 10%;
+
+    --secondary: 160 15% 20%;
+    --secondary-foreground: 35 30% 96%;
+
+    --muted: 160 15% 20%;
+    --muted-foreground: 35 20% 65%;
+
+    --accent: 140 40% 30%;
+    --accent-foreground: 35 30% 96%;
+
+    --destructive: 355 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 42 85% 60%;
+    --warning-foreground: 30 30% 10%;
+
+    --border: 160 15% 25%;
+    --input: 160 15% 25%;
+    --ring: 165 55% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
